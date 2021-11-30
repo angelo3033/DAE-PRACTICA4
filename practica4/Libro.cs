@@ -18,6 +18,7 @@ namespace practica4
         public Libro()
         {
             this.Autor = new HashSet<Autor>();
+            this.Prestamos = new HashSet<Prestamos>();
         }
     
         public int IdLibro { get; set; }
@@ -29,6 +30,7 @@ namespace practica4
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Autor> Autor { get; set; }
-        public virtual Prestamos Prestamos { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Prestamos> Prestamos { get; set; }
     }
 }
